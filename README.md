@@ -40,16 +40,17 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 
 **PROGRAM**
 ```
-  module exp11(out,clk,rstn);
-  input clk,rstn;
-  output reg [3:0]out;
-  always @ (posedge clk)
-  begin
-     if(!rstn)
-       out<=0;
-     else 
-       out <= out+1;
-  end
+ module EXP11(clk,rstn,out);
+input clk,rstn;
+output reg [3:0]out;
+always @ (posedge clk)
+begin
+   if(!rstn)
+     out<=0;
+   else 
+     out <= out+1;
+end
+endmodule
 ```
 
 
@@ -58,17 +59,20 @@ RegisterNumber:212224100018
 
 
 **RTL LOGIC UP COUNTER**
-![445444939-9f672a0d-fdc0-46d5-98d0-6e8cc6971f0c](https://github.com/user-attachments/assets/e66afe3c-f414-4af5-b4d0-fff316ad220b)
+![445444939-9f672a0d-fdc0-46d5-98d0-6e8cc6971f0c](https://github.com/user-attachments/assets/cc68f158-c9ff-419c-ba92-8a13ba8eb779)
+
 
 
 **TIMING DIAGRAM FOR IP COUNTER**
-![445444776-3fd6c8ab-a5dd-4bd7-bd00-72c0d73bc6c1](https://github.com/user-attachments/assets/131f9cfe-e234-4743-af16-4cdb1bbba6d2)
+![445444776-3fd6c8ab-a5dd-4bd7-bd00-72c0d73bc6c1](https://github.com/user-attachments/assets/d4161728-8970-4671-93f9-539535008160)
+
 
 
 **TRUTH TABLE**
 
-![440642119-33fe9063-b902-4983-a0dd-280db8f4cb51](https://github.com/user-attachments/assets/6aa72079-e2dc-4d98-8eab-3dda66a88d33)
+![446397530-7efc8a50-8790-40e6-936e-e8e900fe28a8](https://github.com/user-attachments/assets/6f90aa57-e730-43b8-b229-03e2459d48f0)
 
 
 **RESULTS**
 
+The result is sucessfully verified
